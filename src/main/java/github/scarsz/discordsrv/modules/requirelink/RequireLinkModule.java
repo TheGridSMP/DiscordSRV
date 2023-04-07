@@ -25,6 +25,7 @@ import github.scarsz.discordsrv.Debug;
 import github.scarsz.discordsrv.DiscordSRV;
 import github.scarsz.discordsrv.util.DiscordUtil;
 import github.scarsz.discordsrv.util.MessageUtil;
+import github.scarsz.discordsrv.util.SchedulerUtil;
 import net.dv8tion.jda.api.entities.Guild;
 import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.entities.Role;

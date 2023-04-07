@@ -29,6 +29,7 @@ import github.scarsz.discordsrv.objects.managers.GroupSynchronizationManager;
 import github.scarsz.discordsrv.util.DiscordUtil;
 import github.scarsz.discordsrv.util.PluginUtil;
 import github.scarsz.discordsrv.util.PrettyUtil;
+import github.scarsz.discordsrv.util.SchedulerUtil;
 import lombok.Getter;
 import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.entities.Role;

@@ -26,16 +26,11 @@ import github.scarsz.discordsrv.api.events.DiscordConsoleCommandPostProcessEvent
 import github.scarsz.discordsrv.api.events.DiscordConsoleCommandPreProcessEvent;
 import github.scarsz.discordsrv.util.DiscordUtil;
 import github.scarsz.discordsrv.util.LangUtil;
-import github.scarsz.discordsrv.util.PluginUtil;
 import github.scarsz.discordsrv.util.TimeUtil;
-import net.dv8tion.jda.api.entities.Message;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import org.apache.commons.io.FileUtils;
 import org.bukkit.Bukkit;
-import org.bukkit.plugin.InvalidDescriptionException;
-import org.bukkit.plugin.InvalidPluginException;
-import org.bukkit.plugin.Plugin;
 
 import java.io.File;
 import java.io.IOException;

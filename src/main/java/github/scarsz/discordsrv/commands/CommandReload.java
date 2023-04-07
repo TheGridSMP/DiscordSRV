@@ -25,6 +25,7 @@ import github.scarsz.discordsrv.api.events.ConfigReloadedEvent;
 import github.scarsz.discordsrv.hooks.chat.TownyChatHook;
 import github.scarsz.discordsrv.util.LangUtil;
 import github.scarsz.discordsrv.util.MessageUtil;
+import github.scarsz.discordsrv.util.SchedulerUtil;
 import github.scarsz.discordsrv.util.UpdateUtil;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
