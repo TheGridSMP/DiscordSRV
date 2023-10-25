@@ -38,21 +38,22 @@ release {
 publishing {
     repositories {
         maven {
-            val repository = "https://nexus.scarsz.me/content/repositories/"
-            val releasesRepoUrl = repository + "releases"
-            val snapshotsRepoUrl = repository + "snapshots"
-            url = uri(if (version.toString().endsWith("SNAPSHOT")) snapshotsRepoUrl else releasesRepoUrl)
+            name = "GitHub"
+            url = uri("https://maven.pkg.github.com/TheGridSMP/DiscordSRV")
 
             credentials {
-                username = System.getenv("REPO_USERNAME") ?: "ci"
-                password = (System.getenv("REPO_PASSWORD") ?: project.property("repoPassword")).toString()
+                username = project.findProperty("gpr.user") as String? ?: System.getenv("USERNAME")
+                password = project.findProperty("gpr.key") as String? ?: System.getenv("TOKEN")
             }
         }
+
+        mavenLocal()
     }
+
     publications {
-        create<MavenPublication>("maven") {
-            from(components["java"])
+        register<MavenPublication>("maven") {
             artifactId = "discordsrv"
+            from(components["java"])
         }
     }
 }
@@ -169,6 +170,7 @@ tasks {
 repositories {
     mavenLocal()
     mavenCentral()
+
     maven("https://hub.spigotmc.org/nexus/content/repositories/snapshots/")
     maven("https://papermc.io/repo/repository/maven-public/")
     maven("https://oss.sonatype.org/content/repositories/snapshots")
